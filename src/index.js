@@ -9,6 +9,15 @@ module.exports = function getTimeForEducation(
     knowsProgramming = true,
     config = {family: 4}
     ) {
-      return 0;
+      var studyDuration = 800;
+      var efficiencyCoeff;
+      var weeks;
+      if (knowsProgramming) {
+        efficiencyCoeff = 1
+      }
+      else {
+        efficiencyCoeff = 0.5
+      }
+      return studyDuration/config[focus]*efficiencyCoeff;
   };
   
