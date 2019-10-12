@@ -18,6 +18,6 @@ module.exports = function getTimeForEducation(
       else {
         efficiencyCoeff = 0.5
       }
-      return studyDuration/config[focus]*efficiencyCoeff;
+      return Math.ceil(studyDuration/config[focus]*efficiencyCoeff);
   };
   
